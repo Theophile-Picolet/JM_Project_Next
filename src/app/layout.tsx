@@ -20,6 +20,11 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "Jean-Marie Picolet - Psychologue à Craponne",
   description: "Cabinet de Jean-Marie Picolet, psychologue du développement à Craponne. Consultations, bilans psychologiques pour enfants, adolescents, adultes et familles.",
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
