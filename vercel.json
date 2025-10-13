@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.psychologue-craponne-jeanmariepicolet.fr/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.psychologue-craponne.fr"
+        }
+      ],
+      "permanent": true
+    }
+  ]
+}
