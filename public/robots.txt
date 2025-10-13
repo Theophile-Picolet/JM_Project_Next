@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Pages importantes
+Allow: /
+Allow: /about
+Allow: /consultation
+
+# Fichiers sitemap
+Sitemap: https://www.psychologue-craponne-jeanmariepicolet.fr/sitemap.xml
+
+# Disallow des fichiers techniques
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: *.json$
+Disallow: /admin/
+Disallow: *.json$

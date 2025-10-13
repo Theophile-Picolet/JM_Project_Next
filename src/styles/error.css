@@ -1,0 +1,10 @@
+.erreur404 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--beige-color);
+  background-color: var(--third-color);
+}

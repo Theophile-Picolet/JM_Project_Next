@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import '../styles/homePage.css';
+@import '../styles/about.css';
+@import '../styles/appointments.css';
+@import '../styles/consultationPage.css';
+@import '../styles/consultations.css';
+@import '../styles/error.css';
+@import '../styles/footer.css';
+@import '../styles/navbar.css';
+@import '../styles/slider.css';
+
+/* Styles globaux identiques au projet React original */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Anaheim", sans-serif;
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 1.6;
+  background-color: var(--beige-color);
+
+  /* Scrollbar personnalisée pour Firefox uniquement */
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey-color) transparent;
+}
+
+body p {
+  color: var(--primary-color);
+  max-width: 65ch;
+}
+
+/* Container pour pousser le contenu sous la navbar */
+body {
+  padding-top: 75px; /* Hauteur de la navbar + marge */
+}
+
+/* Scrollbar WebKit (Chrome, Safari, Edge) - style global */
+body::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--grey-color);
+  border-radius: 3px;
+  border: none;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Masquer les flèches de la scrollbar */
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Style global pour tous les éléments avec scrollbar */
+*::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--grey-color);
+  border-radius: 3px;
+  border: none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Variables CSS du projet original */
+:root {
+  --primary-color: #f5f4f3;
+  --secondary-color: #455a56;
+  --third-color: #2a3835;
+  --beige-color: #fffefa;
+  --corail-color: #ffb14a;
+  --orange-color: #de6800;
+  --grey-color: #688781;
+  --brown-color: #41392c;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

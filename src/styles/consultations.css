@@ -1,0 +1,477 @@
+@media only screen and (max-width: 768px) {
+  .consultations-title {
+    margin: 1.2rem 0 0.8rem 0;
+  }
+  .consultations-title h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+}
+/* =====================================
+   STYLES POUR LES MODALES DE CONSULTATION
+   ===================================== */
+
+/* Overlay de la modale */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.2s ease-out;
+}
+
+.modal-overlay.modal-entering {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay.modal-exiting {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Contenu principal de la modale */
+.modal-content {
+  background: var(--beige-color);
+  border-radius: 40px 1px;
+  max-width: 1150px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.307);
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modal-overlay.modal-entering .modal-content {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.modal-overlay.modal-exiting .modal-content {
+  opacity: 0;
+  transform: scale(0.92) translateY(15px);
+}
+
+/* Bouton de fermeture */
+.modal-close {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.15rem;
+  background: var(--primary-color);
+  color: var(--grey-color);
+  border: none;
+  border-radius: 0 0 0 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.465);
+}
+
+.modal-close:hover {
+  background: var(--grey-color);
+  transform: scale(1.13);
+  color: var(--beige-color);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.465);
+  transition: all 0.3s ease;
+
+  /* Empêche la scrollbar d'apparaître lors du hover sur la croix (si supporté) */
+  .modal-content:has(.modal-close:hover) {
+    overflow-y: hidden !important;
+  }
+  background: var(--grey-color);
+  /* transform: scale(1.13); */
+  color: var(--beige-color);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.465);
+  transition: all 0.3s ease;
+}
+
+/* =====================================
+   LAYOUT PRINCIPAL DE LA CONSULTATION
+   ===================================== */
+
+.modal-consultation {
+  display: flex;
+  gap: 1rem;
+  padding: 3rem 3rem 2rem 3rem;
+}
+
+/* =====================================
+   SECTION IMAGE ET PRIX
+   ===================================== */
+
+.modal-image-section {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.modal-image-section img {
+  width: 100%;
+  height: 200px;
+  opacity: 0.9;
+  border-radius: 3px;
+}
+
+.modal-image-section h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/* Prix principal */
+.modal-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--primary-color);
+  border-radius: 3px;
+  margin-top: 1rem;
+  box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.164);
+}
+
+.modal-price .price-label {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.modal-price .price-value {
+  font-size: 1.4rem;
+  color: var(--third-color);
+  font-weight: 700;
+}
+
+/* Prix secondaire avec icône d'attention */
+.modal-secondary-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--primary-color);
+  border-radius: 3px;
+  margin-top: 1rem;
+  box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.164);
+}
+
+.secondary-price-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.secondary-price-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.secondary-price-value {
+  font-size: 1.4rem;
+  color: var(--orange-color);
+  font-weight: 700;
+}
+
+.secondary-price-label {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* =====================================
+   BOUTON DE CONTACT
+   ===================================== */
+
+.modal-contact-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--grey-color);
+  color: var(--beige-color);
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  font-family: "Anaheim", sans-serif;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.319);
+}
+
+.modal-contact-btn:hover {
+  background: var(--orange-color);
+  transform: translateY(-3px);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.585);
+  transition: all 0.2s ease;
+}
+
+/* =====================================
+   SECTION TEXTE DE LA CONSULTATION
+   ===================================== */
+
+.modal-text-section {
+  flex: 1;
+  padding-left: 1.5rem;
+}
+
+.modal-text-section p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--third-color);
+  margin-bottom: 1rem;
+}
+
+.modal-text-section ul {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--third-color);
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding-left: 0;
+}
+
+.modal-text-section li {
+  margin-bottom: 0.8rem;
+  list-style-type: disc;
+}
+
+.modal-text-section strong {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+/* =====================================
+   MODALE D'INFORMATIONS DE RENDEZ-VOUS
+   ===================================== */
+
+.appointment-info-modal {
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  /* Personnalisation de la scrollbar Firefox uniquement */
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey-color) transparent;
+}
+
+.appointment-info-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appointment-info-content h3 {
+  font-size: 1.6rem;
+  color: var(--orange-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.appointment-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.appointment-info-text p {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.appointment-important-info {
+  background: rgba(205, 124, 37, 0.1);
+  border-left: 4px solid var(--orange-color);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.appointment-important-info p {
+  margin-bottom: 1rem;
+}
+
+.appointment-important-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Message d'urgence */
+.emergency-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: rgba(205, 124, 37, 0.15);
+  border: 1px solid var(--orange-color);
+  border-radius: 10px;
+  margin: 1.2rem 0 0.5rem 0;
+}
+
+.emergency-message span {
+  font-size: 16px;
+  font-weight: 650;
+  color: var(--secondary-color);
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* =====================================
+   STYLES RESPONSIVE (MOBILE)
+   ===================================== */
+
+@media only screen and (max-width: 768px) {
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    width: calc(100vw - 2rem);
+    margin: 0;
+  }
+
+  .modal-consultation {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    position: relative;
+  }
+
+  .modal-image-section {
+    flex: none;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    order: 1;
+  }
+
+  .modal-image-section h3 {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 1rem;
+    margin-top: 200px;
+  }
+
+  .modal-image-section .modal-price {
+    position: relative;
+    z-index: 2;
+    margin: 1rem;
+  }
+
+  .modal-image-section .modal-secondary-price {
+    position: relative;
+    z-index: 2;
+    margin: 0.5rem 1rem 1rem 1rem;
+  }
+
+  .modal-image-section .modal-contact-btn {
+    position: relative;
+    z-index: 2;
+    margin: 1rem auto 0 auto;
+    display: block;
+    width: calc(100% - 2rem);
+  }
+
+  .modal-image-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 40px 1px 0 0;
+    filter: blur(0.3px);
+  }
+
+  .modal-text-section {
+    padding: 1.5rem;
+    order: 2;
+  }
+
+  .modal-text-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .modal-text-section ul {
+    font-size: 1rem;
+    margin: 0.8rem 0 1rem 1rem;
+  }
+
+  .modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+
+  .modal-contact-btn {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  .modal-contact-btn:hover {
+    background: var(--grey-color);
+    transform: none;
+    transition: none;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.319);
+  }
+
+  /* Modale d'informations de rendez-vous responsive */
+  .appointment-info-modal {
+    width: calc(100vw - 2rem);
+    max-height: 90vh;
+    margin: 0;
+  }
+
+  .appointment-info-content {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .appointment-info-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .appointment-info-text p {
+    font-size: 16px;
+  }
+
+  .appointment-important-info {
+    padding: 1rem;
+  }
+
+  .emergency-message {
+    margin: 1rem 0 0.4rem 0;
+    padding: 0.8rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .emergency-message span {
+    font-size: 14px;
+  }
+}
