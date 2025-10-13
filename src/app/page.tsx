@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import HomePage from '../components/HomePage';
-import EmailJSDebug from '../components/EmailJSDebug';
 
 export const metadata: Metadata = {
   title: "Jean-Marie Picolet - Psychologue à Craponne",
@@ -25,10 +24,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return (
-    <>
-      <HomePage />
-      <EmailJSDebug />
-    </>
-  );
+  return <HomePage />;
 }
