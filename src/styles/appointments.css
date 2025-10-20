@@ -1,3 +1,9 @@
+.appointment-info-modal {
+  scrollbar-width: none; /* Firefox */
+}
+.appointment-info-modal::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 .appointments .modal-contact-btn {
   display: none;
 }

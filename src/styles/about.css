@@ -1,3 +1,10 @@
+/* Masquer la scrollbar mais garder le scroll sur la page About */
+.about {
+  scrollbar-width: none; /* Firefox */
+}
+.about::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 /* Import du style homepage pour cohérence */
 @keyframes bounceArrow {
   0%,
@@ -134,6 +141,16 @@ span.it {
     }
   }
 
+    /* Scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 1px;
+      background: transparent;
+    }
+    @media only screen and (max-width: 768px) {
+      &::-webkit-scrollbar {
+        width: 1px;
+      }
+    }
   /* Layout principal en colonnes */
   .about-main-layout {
     max-width: 1200px;
@@ -313,6 +330,16 @@ span.it {
     }
   }
 
+    /* Scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: transparent;
+    }
+    @media only screen and (max-width: 768px) {
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+    }
   /* Section cadre de travail */
   .working-section {
     height: auto;

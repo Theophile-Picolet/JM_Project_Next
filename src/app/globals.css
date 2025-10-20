@@ -1,4 +1,4 @@
-@import "tailwindcss";
+
 @import '../styles/homePage.css';
 @import '../styles/about.css';
 @import '../styles/appointments.css';
@@ -8,6 +8,14 @@
 @import '../styles/footer.css';
 @import '../styles/navbar.css';
 @import '../styles/slider.css';
+
+/* Masquer la scrollbar mais garder le scroll */
+body, * {
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar, *::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 
 /* Styles globaux identiques au projet React original */
 * {
@@ -40,7 +48,7 @@ body {
 
 /* Scrollbar WebKit (Chrome, Safari, Edge) - style global */
 body::-webkit-scrollbar {
-  width: 6px;
+  width: 1px;
   background: transparent;
 }
 
@@ -71,8 +79,20 @@ body::-webkit-scrollbar-button {
 
 /* Style global pour tous les éléments avec scrollbar */
 *::-webkit-scrollbar {
-  width: 6px;
+  width: 1px;
   background: transparent;
+}
+@media only screen and (max-width: 768px) {
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    width: 1px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    width: 2px;
+  }
 }
 
 *::-webkit-scrollbar-track {

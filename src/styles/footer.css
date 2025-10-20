@@ -1,3 +1,47 @@
+@media only screen and (max-width: 767px) {
+  .footer-nav-right .footer-legal-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+  }
+  .footer-nav-right .footer-legal-link h1,
+  .footer-nav-right .footer-legal-link h2,
+  .footer-nav-right .footer-legal-link h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .footer-nav-right .footer-legal-link p,
+  .footer-nav-right .footer-legal-link li,
+  .footer-nav-right .footer-legal-link a {
+    font-size: 0.95rem;
+  }
+}
+.footer-nav-right .footer-legal-link:hover {
+  transform: none;
+}
+/* Style pour les boutons légaux du footer, identique au dernier bouton du footer-nav */
+.footer-nav-right .footer-legal-link {
+  all: unset;
+  cursor: pointer;
+}
+/* Style pour les boutons légaux du footer, identique au bouton 'Prendre un rendez-vous' */
+.footer-legal-link {
+  background-color: var(--beige-color);
+  color: var(--secondary-color);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 5rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Anaheim", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  transition: all ease-in 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 25px -20px;
+}
+
 @media only screen and (min-width: 768px) {
   .footer-nav .contact-btn {
     border: none;
