@@ -1,3 +1,18 @@
+.appointment-info-modal h1,
+.appointment-info-modal h2,
+.appointment-info-modal h3,
+.appointment-info-modal h4,
+.appointment-info-modal h5,
+.appointment-info-modal h6,
+.appointment-info-modal p,
+.appointment-info-modal a,
+.appointment-info-modal ul,
+.appointment-info-modal li,
+.appointment-info-modal strong,
+.appointment-info-modal span,
+.appointment-info-modal div {
+  background: inherit !important;
+}
 @media only screen and (max-width: 768px) {
   .consultations-title {
     margin: 1.2rem 0 0.8rem 0;
@@ -261,14 +276,45 @@
    MODALE D'INFORMATIONS DE RENDEZ-VOUS
    ===================================== */
 
-.appointment-info-modal {
-  max-width: 650px;
-  max-height: 85vh;
-  overflow-y: auto;
-  /* Personnalisation de la scrollbar Firefox uniquement */
-  scrollbar-width: thin;
-  scrollbar-color: var(--grey-color) transparent;
+ .appointment-info-modal {
+   max-width: 650px;
+   max-height: 85vh;
+   overflow-y: auto;
+   color: var(--third-color);
+  /* Scrollbar Webkit (Chrome, Safari, Edge) */
 }
+
+.appointment-info-modal::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+}
+.appointment-info-modal::-webkit-scrollbar-thumb {
+  background-color: var(--grey-color);
+  border-radius: 3px;
+}
+.appointment-info-modal::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+ 
+ 
+
+/* Forcer le texte en noir dans la modale légale du footer */
+.appointment-info-modal h1,
+.appointment-info-modal h2,
+.appointment-info-modal h3,
+.appointment-info-modal h4,
+.appointment-info-modal h5,
+.appointment-info-modal h6,
+.appointment-info-modal p,
+.appointment-info-modal a,
+.appointment-info-modal ul,
+.appointment-info-modal li,
+.appointment-info-modal strong,
+.appointment-info-modal span,
+.appointment-info-modal div {
+  color: var(--third-color) !important;
+}
+
 
 .appointment-info-content {
   padding: 1.5rem;
@@ -474,4 +520,4 @@
   .emergency-message span {
     font-size: 14px;
   }
-}
+} 
