@@ -9,11 +9,11 @@
 }
 
 span.bold {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 span.bold-bot {
-  font-weight: 650;
+  font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: 0.2px;
   font-style: italic;

@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const anaheim = Anaheim({
-  weight: ["400"],
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-anaheim",
 });
