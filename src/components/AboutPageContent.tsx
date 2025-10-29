@@ -91,7 +91,7 @@ export default function AboutPageContent() {
                   <span className="bold">
                     Les 10 années d'exercice en SESSAD - ITEP
                   </span>{" "}
-                  mon amené à accompagner et prendre en charge des enfants,
+                  m'ont amené à accompagner et prendre en charge des enfants,
                   adolescents, jeunes adultes et leur famille. Pour cela j'ai
                   été formé à{" "}
                   <span className="it-bold">l'approche systémique</span> ainsi
@@ -129,7 +129,7 @@ export default function AboutPageContent() {
                   <span className="bold">
                     éclairer la clinique du patient et aider au diagnostic
                   </span>{" "}
-                  m'a toujours accompagnée durant ces années.{" "}
+                  m'a toujours accompagné durant ces années.{" "}
                 </p>
                 <p>
                   Par ailleurs, j'ai également pu{" "}
@@ -222,7 +222,7 @@ export default function AboutPageContent() {
                   <p>
                     Au sein de mon cabinet à Craponne,{" "}
                     <span className="bold">je vous reçois en face à face</span>.
-                    En fonction des personnes présentent, de vos âges et du
+                    En fonction des personnes présentes, de vos âges et du
                     contenu des séances, l'espace sera aménagé pour répondre à
                     vos spécificités et{" "}
                     <span className="bold">
@@ -302,7 +302,7 @@ export default function AboutPageContent() {
               <span className="bold">
                 Il s'agit d'une expertise et d'un savoir-faire
               </span>{" "}
-              qui permet au patient de cheminer en se questionnant.
+              qui permettent au patient de cheminer en se questionnant.
             </p>
           </div>
         </div>
@@ -311,7 +311,7 @@ export default function AboutPageContent() {
             <span className="it">
               A contrario, il est possible d'obtenir le titre de
               psychothérapeute sans être psychologue mais ayant obtenu un
-              diplôme, reconnue par l'état, spécifique à une méthode. Attention,
+              diplôme, reconnu par l'état, spécifique à une méthode. Attention,
               certains utilisent le titre de psychopraticien pour proposer du
               soin psychologique sans avoir obtenu de diplôme reconnu par
               l'État.

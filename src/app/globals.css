@@ -27,7 +27,7 @@ body::-webkit-scrollbar, *::-webkit-scrollbar {
 body {
   font-family: "Anaheim", sans-serif;
   font-size: 16px;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 1.6;
   background-color: var(--beige-color);
 
