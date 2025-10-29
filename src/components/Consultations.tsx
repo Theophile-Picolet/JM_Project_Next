@@ -262,7 +262,7 @@ export default function Consultations({
         },
       ],
       conclusion:
-        "Dans l'approche développementale, l'ensemble de ces dimensions (relationnelle, affective, comportementale et cognitive) sont traitées en lien étroit. En fonction de la compréhension des difficultés de votre enfant, le soin peut se penser de différentes façons (psychothérapie par la parole, le jeu ou encore médiation cognitive). Il peut aussi s'avérer que la modalité choisie ensembles soit celle de la guidance parentale qui consiste en l'accompagnement des parents dans la compréhension de leur enfant et dans leur positionnement.",
+        "Dans l'approche développementale, l'ensemble de ces dimensions (relationnelle, affective, comportementale et cognitive) sont traitées en lien étroit. En fonction de la compréhension des difficultés de votre enfant, le soin peut se penser de différentes façons (psychothérapie par la parole, le jeu ou encore médiation cognitive). Il peut aussi s'avérer que la modalité choisie ensemble soit celle de la guidance parentale qui consiste en l'accompagnement des parents dans la compréhension de leur enfant et dans leur positionnement.",
     },
     // Adolescents
     {
